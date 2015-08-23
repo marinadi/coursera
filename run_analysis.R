@@ -595,7 +595,6 @@ lay<-filter(selected_data,activity==6)
 ly<-cbind(lay,activity_type="laying")
 Clean_table<-rbind(wk,wu,wk,si,sta,ly)
 FinalTable<-select(Clean_table,activity_type,subject,set:fBodyBodyGyroJerkMag_std)
-Sumarized_data<-summarize(FinalTable,activity_type,subject,mean(set:fBodyBodyGyroJerkMag_std))
 Summarised<-summarise(group_by(FinalTable, activity_type,subject), 
                       +                       mean( tBodyAcc_mean_X                    ),
                       +                       mean(  tBodyAcc_mean_Y                    ),
